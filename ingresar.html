@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">        
+        <title>Examen michael</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">        
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/main.css" />
+        <script src="js/angular.js"></script>        
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>        
+        <script src="js/app.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
+        <script src="js/bootstrap-filestyle.min.js"></script>
+        <script>$(":file").filestyle({buttonText: "Selecciona archivo"});</script>
+        
+    </head>
+    <body>
+        
+        <div class="navbar navbar-default" id="navbar">
+            <div class="container" id="navbar-container">
+            <div class="navbar-header elementName">                            
+                 <a href="index.html" class="navbar-brand">
+                <small>
+                    <i class="glyphicon glyphicon-log-out"></i>
+                    Edwin michael vallejo torres
+                </small>
+                </a>                            
+                                                                         
+            </div>
+            <div class="navbar-header pull-left" role="navigation">
+                <a href="ingresar.html" class="btn btn-sm btn-success nav-button-margin"> <i class="glyphicon glyphicon-book"></i>&nbsp;Inserta nombre</a>            
+                <a href="listado.html" class="btn btn-sm btn-info nav-button-margin"> <i class="glyphicon glyphicon-folder-open"></i>&nbsp;Ver listado</a>                
+            </div>
+            </div>
+        </div>
+        
+        <div ng-app="myApp">
+            <form name="saveTemplateData" ng-controller="FormCtrl" ng-submit="submitForm()">
+                <div class="myform">
+                    <h1>Coloca los datos</h1>
+                    <div class="form-group">
+                        <div class="encapsula">
+                            <label for="name">Nombre</label>
+                            <input type="text" ng-model="form.name" placeholder="Nombre">
+                        </div>                        
+                    </div>                
+                    <div class="form-group">
+                        <div class="encapsula">
+                            <label for="genre">Genero</label><br />
+                            <input type="radio" ng-model="form.genre" value="01" />Masculino
+                            <input type="radio" ng-model="form.genre" value="02" />Femenino
+                            
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="profile_image">Profile</label>
+                        <input type="file" ng-model="form.profile_image" id="profile_image" class="filestyle" data-buttonText="Selecciona archivo" data-buttonName="btn-primary">
+                    </div>
+                    <div class="form-group">
+                        <label for="genre">Background</label>
+                        <input type="file" ng-model="form.background_image" id="background_image" class="filestyle" data-buttonText="Selecciona archivo" data-buttonName="btn-primary">
+                    </div>            
+                    <input type="submit" ngClick="Submit" class="btn btn-primary">
+                </div>
+            </form>            
+        </div>
+    </body>
+</html>
